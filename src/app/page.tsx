@@ -1,113 +1,117 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+    <div className="flex min-h-screen w-full flex-col items-center justify-middle   ">
+      <main className="max-w-[1250px] w-full h-full flex flex-col justify-between flex-1 gap-12">
+        <nav className="flex align-middle w-full justify-center fixed top-6 left-0 right-0 ">
+          <div className="flex gap-6 align-middle w-full justify-between max-w-[1250px] px-24 items-center">
+            <div className="flex gap-6 items-center">
+              <Image
+                src="/muroto logo.svg"
+                width={50}
+                height={50}
+                alt="Muroto Logo"
+              />
+              <Link href="/" className="text-xl font-bold text-blue-500">
+                Home
+              </Link>
+              <Link href="/about" className="text-xl font-bold text-blue-500">
+                About
+              </Link>
+              <Link href="/contact" className="text-xl font-bold text-blue-500">
+                Contact
+              </Link>
+            </div>
+
+            <div>
+              <button className="py-2 px-4 bg-[#E45826] rounded-full text-white font-bold">
+                Coming soon
+              </button>
+            </div>
+          </div>
+        </nav>
+
+        <section className="w-full flex gap-[180px]">
+          <div className="flex max-w-[580px] pl-24 mt-[170px] h-[800px] items-center">
+            <div>
+              <div className="flex gap-3 flex-col">
+                <h1 className="text-6xl font-bold">Designs that</h1>
+                <div className="relative">
+                  <h1 className="text-6xl font-bold">empowers your</h1>
+                  <div className="absolute top-0 left-0">
+                    {/* @ts-ignore */}
+                    <dotlottie-player
+                      src="https://lottie.host/8b70e5a1-bee6-4f4c-934e-1f27e75279ae/GVlDrBPNif.json"
+                      background="transparent"
+                      speed="0.65"
+                      style={{ width: 300, height: 140 }}
+                      loop
+                      autoplay
+                    />
+                  </div>
+                </div>
+
+                <h1 className="text-6xl font-bold">brand</h1>
+              </div>
+
+              <p className="text-sm mt-6">
+                Seeking a website that goes beyond standard templates and
+                frameworks? Our development team specializes in custom code and
+                design, ensuring your online presence is optimized for
+                performance and tailored to your exact specifications.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div className="absolute right-0  top-[170px] bg-[#E45826] h-[800px] w-[48%] pointer-events-none rounded-l-full z-0 flex items-center">
+              <div className="w-[340px] h-[340px] rounded-full bg-white ml-[200px] flex justify-center item-center overflow-hidden">
+                {/* @ts-ignore */}
+                <dotlottie-player
+                  src="https://lottie.host/09972e00-7c13-4062-a251-757c0feefbc3/VaJOZ1OSbN.json"
+                  background="transparent"
+                  speed="0.65"
+                  style={{ width: 300, height: 300, paddingTop: 20 }}
+                  loop
+                  autoplay
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer className="flex justify-between px-24 pb-12 gap-12 items-center">
+          <div className="w-[280px]">
+            <p className="text-xs">Creative agency located in Toronto</p>
+            <p className="text-xs">© 2021 Muroto. All rights reserved</p>
+          </div>
+
+          <div className="relative">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              style={{ position: "absolute", top: 0, left: 0 }}
+              src="/animation-012.svg"
+              width={200}
+              height={200}
+              alt="Muroto Logo"
+              className="contact-animation"
             />
-          </a>
-        </div>
-      </div>
+            <a className="text-sm m-12" href="https://www.facebook.com/muroto">
+              <div className="text-xl font-bold w-[100px] h-[100px] bg-[#324ba0] rounded-full flex justify-center items-center m-6">
+                <p className="font-bold text-sm text-white">Let's talk</p>
+              </div>
+            </a>
+          </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          <div className="w-[280px]">
+            <p className="text-xs text-right">
+              Weaving together creativity to link people to cutting-edge
+              technology.
+            </p>
+          </div>
+        </footer>
+      </main>
+    </div>
   );
 }
