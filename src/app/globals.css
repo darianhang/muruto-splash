@@ -40,3 +40,17 @@ body {
   animation: rotate 10s linear infinite;
   pointer-events: none;
 }
+
+.bg-dots {
+  background-image: url("/dot.svg");
+  contain: paint;
+  background-position: 50%;
+  position: absolute;
+  min-width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 400px;
+  mask-image: linear-gradient(transparent, #000);
+  z-index: -1;
+}

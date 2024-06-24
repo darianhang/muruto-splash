@@ -97,7 +97,7 @@ export default function Home() {
               alt="Muroto Logo"
               className="contact-animation"
             />
-            <a className="text-sm m-12" href="https://www.facebook.com/muroto">
+            <a className="text-sm" href="https://www.facebook.com/muroto">
               <div className="text-xl font-bold w-[100px] h-[100px] bg-[#324ba0] rounded-full flex justify-center items-center m-6">
                 <p className="font-bold text-sm text-white">Let's talk</p>
               </div>
@@ -112,6 +112,9 @@ export default function Home() {
           </div>
         </footer>
       </main>
+      <div className="bg-dots" />
+      <div className="bg-dots" />
+      <div className="bg-dots" />
     </div>
   );
 }
