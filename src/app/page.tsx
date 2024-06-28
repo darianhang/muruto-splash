@@ -1,12 +1,18 @@
+import { StarsCircles } from "@/components/stars-circles";
 import Image from "next/image";
 import Link from "next/link";
+
+export const MAIN_COLOR = "#324ba0";
+export const ALT_COLOR = "#E45826";
+export const ALT_COLOR_LIGHT = "#e5977a";
+export const ALT_COLOR_DARK = "#c13e0d";
 
 export default function Home() {
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-middle   ">
-      <main className="max-w-[1250px] w-full h-full flex flex-col justify-between flex-1 gap-12">
+      <main className="max-w-[1450px] w-full h-full flex flex-col justify-between flex-1 gap-12">
         <nav className="flex align-middle w-full justify-center fixed top-6 left-0 right-0 ">
-          <div className="flex gap-6 align-middle w-full justify-between max-w-[1250px] px-24 items-center">
+          <div className="flex gap-6 align-middle w-full justify-between max-w-[1450px] px-6 md:px-24 items-center">
             <div className="flex gap-6 items-center">
               <Image
                 src="/muroto logo.svg"
@@ -17,73 +23,106 @@ export default function Home() {
               <Link href="/" className="text-xl font-bold text-blue-500">
                 Home
               </Link>
-              <Link href="/about" className="text-xl font-bold text-blue-500">
+              <Link
+                href="https://www.linkedin.com/company/muroto/"
+                className="text-xl hidden sm:inline-block font-bold text-blue-500"
+              >
                 About
-              </Link>
-              <Link href="/contact" className="text-xl font-bold text-blue-500">
-                Contact
               </Link>
             </div>
 
             <div>
-              <button className="py-2 px-4 bg-[#E45826] rounded-full text-white font-bold">
-                Coming soon
-              </button>
+              <Link
+                href="https://www.linkedin.com/company/muroto/"
+                className="py-2 px-4 bg-[#E45826] rounded-full text-white font-bold"
+              >
+                Contact us
+              </Link>
             </div>
           </div>
         </nav>
 
-        <section className="w-full flex gap-[180px]">
-          <div className="flex max-w-[580px] pl-24 mt-[170px] h-[800px] items-center">
-            <div>
-              <div className="flex gap-3 flex-col">
-                <h1 className="text-6xl font-bold">Designs that</h1>
-                <div className="relative">
-                  <h1 className="text-6xl font-bold">empowers your</h1>
-                  <div className="absolute top-0 left-0">
-                    {/* @ts-ignore */}
-                    <dotlottie-player
-                      src="https://lottie.host/8b70e5a1-bee6-4f4c-934e-1f27e75279ae/GVlDrBPNif.json"
-                      background="transparent"
-                      speed="0.65"
-                      style={{ width: 300, height: 140 }}
-                      loop
-                      autoplay
-                    />
+        <div>
+          <section className="w-full flex gap-[180px]">
+            <div className="flex xl:max-w-[580px] max-w-full md:max-w-[450px] pr-6 md:pr-0 pl-6 md:pl-24 mt-[120px] md:mt-[170px]  md:h-[650px] items-center z-50">
+              <div>
+                <div className="flex gap-3 flex-col w-full">
+                  <h1 className="text-4xl font-bold xl:text-6xl text-center md:text-left">
+                    Designs that
+                  </h1>
+                  <div className="relative">
+                    <h1 className="text-4xl font-bold xl:text-6xl text-center md:text-left">
+                      empowers your
+                    </h1>
+                    <div className="absolute top-0 left-0 xl:inline-block hidden">
+                      {/* @ts-ignore */}
+                      <dotlottie-player
+                        src="https://lottie.host/8b70e5a1-bee6-4f4c-934e-1f27e75279ae/GVlDrBPNif.json"
+                        background="transparent"
+                        speed="0.65"
+                        style={{ width: 300, height: 140 }}
+                        loop
+                        autoplay
+                      />
+                    </div>
                   </div>
+
+                  <h1 className="text-4xl font-bold xl:text-6xl text-center md:text-left">
+                    brand
+                  </h1>
                 </div>
 
-                <h1 className="text-6xl font-bold">brand</h1>
-              </div>
-
-              <p className="text-sm mt-6">
-                Seeking a website that goes beyond standard templates and
-                frameworks? Our development team specializes in custom code and
-                design, ensuring your online presence is optimized for
-                performance and tailored to your exact specifications.
-              </p>
-            </div>
-          </div>
-
-          <div>
-            <div className="absolute right-0  top-[170px] bg-[#E45826] h-[800px] w-[48%] pointer-events-none rounded-l-full z-0 flex items-center">
-              <div className="w-[340px] h-[340px] rounded-full bg-white ml-[200px] flex justify-center item-center overflow-hidden">
-                {/* @ts-ignore */}
-                <dotlottie-player
-                  src="https://lottie.host/09972e00-7c13-4062-a251-757c0feefbc3/VaJOZ1OSbN.json"
-                  background="transparent"
-                  speed="0.65"
-                  style={{ width: 300, height: 300, paddingTop: 20 }}
-                  loop
-                  autoplay
-                />
+                <p className="text-sm mt-6 text-center md:text-left">
+                  Seeking a website that goes beyond standard templates and
+                  frameworks? Our development team specializes in custom code
+                  and design, ensuring your online presence is optimized for
+                  performance and tailored to your exact specifications.
+                </p>
               </div>
             </div>
-          </div>
-        </section>
 
-        <footer className="flex justify-between px-24 pb-12 gap-12 items-center">
-          <div className="w-[280px]">
+            <div className="hidden md:inline-block">
+              <div className="absolute right-0  top-[170px] bg-gradient-to-t from-[#E45826] to-[#e5977a] h-[650px] w-[48%] pointer-events-none rounded-l-full z-0 flex items-center">
+                <div className="w-[340px] h-[340px] min-w-[340px] rounded-full z-50 bg-white ml-[145px] flex justify-center item-center overflow-hidden">
+                  {/* @ts-ignore */}
+                  <dotlottie-player
+                    src="https://lottie.host/09972e00-7c13-4062-a251-757c0feefbc3/VaJOZ1OSbN.json"
+                    background="transparent"
+                    speed="0.65"
+                    style={{ width: 300, height: 300, paddingTop: 30 }}
+                    loop
+                    autoplay
+                  />
+                </div>
+                <div className="bg-dots-orange hidden lg:inline-block" />
+                <div className="bg-dots-orange hidden lg:inline-block" />
+                <StarsCircles />
+              </div>
+            </div>
+          </section>
+
+          <section
+            className={`flex overflow-hidden relative justify-center mt-12 items-center h-[500px] md:hidden w-full bg-gradient-to-t from-[${ALT_COLOR}] to-[${ALT_COLOR_LIGHT}]`}
+          >
+            <div className="w-[340px] h-[340px] min-w-[340px] rounded-full z-50 bg-white  flex justify-center item-center overflow-hidden">
+              {/* @ts-ignore */}
+              <dotlottie-player
+                src="https://lottie.host/09972e00-7c13-4062-a251-757c0feefbc3/VaJOZ1OSbN.json"
+                background="transparent"
+                speed="0.65"
+                style={{ width: 300, height: 300, paddingTop: 30 }}
+                loop
+                autoplay
+              />
+            </div>
+            <div className="bg-dots-orange  " />
+            <div className="bg-dots-orange  " />
+            <StarsCircles disablePointer />
+          </section>
+        </div>
+
+        <footer className="flex justify-between flex-col md:flex-row px-6 md:px-24 pb-12 gap-12 items-center">
+          <div className="w-[280px] hidden md:inline-block">
             <p className="text-xs">Creative agency located in Toronto</p>
             <p className="text-xs">© 2021 Muroto. All rights reserved</p>
           </div>
@@ -97,7 +136,10 @@ export default function Home() {
               alt="Muroto Logo"
               className="contact-animation"
             />
-            <a className="text-sm" href="https://www.facebook.com/muroto">
+            <a
+              className="text-sm"
+              href="https://www.linkedin.com/company/muroto/"
+            >
               <div className="text-xl font-bold w-[100px] h-[100px] bg-[#324ba0] rounded-full flex justify-center items-center m-6">
                 <p className="font-bold text-sm text-white">Let's talk</p>
               </div>
@@ -105,10 +147,15 @@ export default function Home() {
           </div>
 
           <div className="w-[280px]">
-            <p className="text-xs text-right">
+            <p className="text-xs text-center md:text-right">
               Weaving together creativity to link people to cutting-edge
               technology.
             </p>
+          </div>
+
+          <div className="w-[280px] text-center md:hidden">
+            <p className="text-xs">Creative agency located in Toronto</p>
+            <p className="text-xs">© 2021 Muroto. All rights reserved</p>
           </div>
         </footer>
       </main>
