@@ -1,17 +1,13 @@
 import { StarsCircles } from "@/components/stars-circles";
+import { ALT_COLOR, ALT_COLOR_LIGHT } from "@/utilities/consts";
 import Image from "next/image";
 import Link from "next/link";
-
-export const MAIN_COLOR = "#324ba0";
-export const ALT_COLOR = "#E45826";
-export const ALT_COLOR_LIGHT = "#e5977a";
-export const ALT_COLOR_DARK = "#c13e0d";
 
 export default function Home() {
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-middle   ">
       <main className="max-w-[1450px] w-full h-full flex flex-col justify-between flex-1 gap-12">
-        <nav className="flex align-middle w-full justify-center fixed top-6 left-0 right-0 ">
+        <nav className="flex align-middle w-full justify-center fixed pt-6 pb-2 left-0 right-0 bg-white z-50">
           <div className="flex gap-6 align-middle w-full justify-between max-w-[1450px] px-6 md:px-24 items-center">
             <div className="flex gap-6 items-center">
               <Image
@@ -44,7 +40,7 @@ export default function Home() {
 
         <div>
           <section className="w-full flex gap-[180px]">
-            <div className="flex xl:max-w-[580px] max-w-full md:max-w-[450px] pr-6 md:pr-0 pl-6 md:pl-24 mt-[120px] md:mt-[170px]  md:h-[650px] items-center z-50">
+            <div className="flex xl:max-w-[580px] max-w-full md:max-w-[450px] pr-6 md:pr-0 pl-6 md:pl-24 mt-[120px] md:mt-[170px]  md:h-[650px] items-center z-40">
               <div>
                 <div className="flex gap-3 flex-col w-full">
                   <h1 className="text-4xl font-bold xl:text-6xl text-center md:text-left">
@@ -83,7 +79,7 @@ export default function Home() {
 
             <div className="hidden md:inline-block">
               <div className="absolute right-0  top-[170px] bg-gradient-to-t from-[#E45826] to-[#e5977a] h-[650px] w-[48%] pointer-events-none rounded-l-full z-0 flex items-center">
-                <div className="w-[340px] h-[340px] min-w-[340px] rounded-full z-50 bg-white ml-[145px] flex justify-center item-center overflow-hidden">
+                <div className="w-[340px] h-[340px] min-w-[340px] rounded-full z-40 bg-white ml-[145px] flex justify-center item-center overflow-hidden">
                   {/* @ts-ignore */}
                   <dotlottie-player
                     src="https://lottie.host/09972e00-7c13-4062-a251-757c0feefbc3/VaJOZ1OSbN.json"
@@ -104,7 +100,7 @@ export default function Home() {
           <section
             className={`flex overflow-hidden relative justify-center mt-12 items-center h-[500px] md:hidden w-full bg-gradient-to-t from-[${ALT_COLOR}] to-[${ALT_COLOR_LIGHT}]`}
           >
-            <div className="w-[340px] h-[340px] min-w-[340px] rounded-full z-50 bg-white  flex justify-center item-center overflow-hidden">
+            <div className="w-[340px] h-[340px] min-w-[340px] rounded-full z-40 bg-white  flex justify-center item-center overflow-hidden">
               {/* @ts-ignore */}
               <dotlottie-player
                 src="https://lottie.host/09972e00-7c13-4062-a251-757c0feefbc3/VaJOZ1OSbN.json"
@@ -121,7 +117,7 @@ export default function Home() {
           </section>
         </div>
 
-        <footer className="flex justify-between flex-col md:flex-row px-6 md:px-24 pb-12 gap-12 items-center">
+        <footer className="flex justify-between flex-col md:flex-row px-6 md:px-24 pb-12 gap-12 items-center relative">
           <div className="w-[280px] hidden md:inline-block">
             <p className="text-xs">Creative agency located in Toronto</p>
             <p className="text-xs">© 2021 Muroto. All rights reserved</p>
@@ -141,7 +137,7 @@ export default function Home() {
               href="https://www.linkedin.com/company/muroto/"
             >
               <div className="text-xl font-bold w-[100px] h-[100px] bg-[#324ba0] rounded-full flex justify-center items-center m-6">
-                <p className="font-bold text-sm text-white">Let's talk</p>
+                <p className="font-bold text-sm text-white">Let&apos;s talk</p>
               </div>
             </a>
           </div>
@@ -157,11 +153,11 @@ export default function Home() {
             <p className="text-xs">Creative agency located in Toronto</p>
             <p className="text-xs">© 2021 Muroto. All rights reserved</p>
           </div>
+          <div className="bg-dots" />
+          <div className="bg-dots" />
+          <div className="bg-dots" />
         </footer>
       </main>
-      <div className="bg-dots" />
-      <div className="bg-dots" />
-      <div className="bg-dots" />
     </div>
   );
 }

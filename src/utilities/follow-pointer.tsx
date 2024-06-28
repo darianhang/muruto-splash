@@ -10,8 +10,9 @@ import { useState, RefObject, useEffect } from "react";
 
 export function useFollowPointer(ref: RefObject<HTMLElement>) {
   const [point, setPoint] = useState({ x: 0, y: 0 });
-  if (!ref) return { x: 0, y: 0 };
+
   useEffect(() => {
+    if (!ref) return;
     if (!ref.current) return;
 
     const handlePointerMove = ({ clientX, clientY }: MouseEvent) => {
