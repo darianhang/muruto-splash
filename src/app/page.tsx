@@ -16,7 +16,7 @@ export default function Home() {
                 height={50}
                 alt="Muroto Logo"
               />
-              <Link href="/" className="text-xl font-bold text-blue-500">
+              <Link href="/" className="text-xl hidden sm:inline-block font-bold text-blue-500">
                 Home
               </Link>
               <Link
