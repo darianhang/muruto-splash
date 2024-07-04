@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-middle   ">
       <main className="max-w-[1450px] w-full h-full flex flex-col justify-between flex-1 gap-12">
-        <nav className="flex align-middle w-full justify-center fixed pt-6 pb-2 left-0 right-0 bg-white z-50">
+        <nav className="flex align-middle w-full justify-center fixed pt-6 pb-6 left-0 right-0 bg-white z-50">
           <div className="flex gap-6 align-middle w-full justify-between max-w-[1450px] px-6 md:px-24 items-center">
             <div className="flex gap-6 items-center">
               <Image
